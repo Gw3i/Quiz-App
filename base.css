@@ -6,10 +6,19 @@ body {
   margin: 0;
   padding: 0px;
   font-size: 62, 5%;
+  font-family: var(--font)
 }
 
 :root {
   --border-rounded: 5px;
+  --font: 'Nunito Sans', sans-serif;
+
+  --light-color: rgb(204, 205, 220);
+  --medium-color: rgb(112, 118, 132);
+  --dark-color: rgb(30, 30, 30);
+  --contrast-color: white;
+
+  --accent-color: #57cc99;
 }
 
 a {

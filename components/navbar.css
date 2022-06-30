@@ -4,7 +4,6 @@
 
 nav {
   border: 2px solid;
-  position: fixed;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
