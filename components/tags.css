@@ -2,4 +2,6 @@
   list-style: none;
 }
 .tag-list {
+  display: flex;
+  gap: 10px;
 }
