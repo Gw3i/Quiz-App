@@ -12,4 +12,7 @@
   padding: 5px;
 }
 
-
+.tag:hover {
+  box-shadow: 1px 1px 0 0;
+  transition: 0.1s;
+}
