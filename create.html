@@ -12,19 +12,36 @@
   </header>
   <body>
     <main class="create-question">
-      <h2>Add your question</h2>
-      <p>Create your question card</p>
+      <h2>Create your question card</h2>
+      <p>Add your question</p>
       <form action="" class="question__form" method="get">
-        <fieldset>
-            <legend>Personal Information</legend>
-            <label for="first-name">First Name</label>
-            <input
-              type="text"
-              name="firstName"
-              id="first-name"
-              placeholder="Your first name"
-              required
-            />
+        <label for="question-text">Question</label>
+        <textarea
+          name="question-text"
+          id="question-text"
+          rows="5"
+          cols="40"
+          placeholder="Enter your question"
+        ></textarea>
+        <p>Add your answer</p>
+        <label for="answer-text">Answer</label>
+        <textarea
+          name="answer-text"
+          id="answer-text"
+          rows="5"
+          cols="40"
+          placeholder="Enter your question"
+        ></textarea>
+        <p>Add tags devided by comma</p>
+        <label for="tag-text">Answer</label>
+        <textarea
+          name="tag-text"
+          id="tag-text"
+          rows="1"
+          cols="40"
+          placeholder="Enter your question"
+        ></textarea>
+        <input class="submit-btn" type="submit" value="Submit" />
       </form>
     </main>
     <nav>
