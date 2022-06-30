@@ -1,5 +1,7 @@
 header {
   text-align: center;
+  margin-bottom: 50px;
+  border: 2px solid;
 }
 h1 {
   color: red;
