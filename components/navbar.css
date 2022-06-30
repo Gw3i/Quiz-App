@@ -1,3 +1,17 @@
 @import "/components/nav-icons.css";
 @import "/base.css";
 @import "/components/utility.css";
+
+nav {
+  border: 2px solid;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.nav-list {
+  display: flex;
+}
+.nav-icons {
+  list-style: none;
+}

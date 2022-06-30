@@ -1,1 +1,6 @@
-@import "/components/headline.css";
+header {
+  text-align: center;
+}
+h1 {
+  color: red;
+}

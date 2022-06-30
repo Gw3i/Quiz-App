@@ -3,3 +3,8 @@
 @import "/components/question-container.css";
 @import "/base.css";
 @import "/components/utility.css";
+
+main {
+    display: flex;
+    justify-content: center;
+}

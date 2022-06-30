@@ -1,4 +1,7 @@
-@import "/components/answer-btn.css";
 @import "/components/bookmark-icon.css";
 @import "/components/buttons.css";
 @import "/components/questions.css";
+
+.card {
+    border: 2px solid;
+}
