@@ -1,7 +1,7 @@
 @import "/base.css";
-@import "/components/utility.css";
 @import "/components/header.css";
 @import "/components/main.css";
 @import "/components/profiles.css";
 @import "/components/question-container.css";
 @import "/components/navbar.css";
+@import "/components/utility.css";
