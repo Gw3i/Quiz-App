@@ -6,4 +6,5 @@
   border: 2px solid;
   padding: 15px;
   border-radius: var(--border-rounded);
+  position: relative;
 }
