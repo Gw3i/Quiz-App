@@ -4,5 +4,7 @@
   border: 2px solid;
 }
 .headline {
-  color: red;
+  color: lightsalmon;
+  text-shadow: 1px 1px 0 black;
+  text-decoration: underline;
 }
