@@ -29,9 +29,14 @@
             />
           </button>
           <p>Who would win in a fight between Superman and Batman?</p>
+          <p class="answer-text answer-text--hidden" data-js="answer-text">
+            I don't know
+          </p>
         </section>
         <section class="card__btn__section">
-          <button class="btn btn--shadow" type="button">Show answer</button>
+          <button class="btn btn--shadow" data-js="answer-btn" type="button">
+            Show answer
+          </button>
           <ul class="tag-list">
             <li><button type="button" class="tag">superheroes</button></li>
             <li><button type="button" class="tag">fighting</button></li>
@@ -92,5 +97,6 @@
         </li>
       </ul>
     </nav>
+    <script src="/script/main.js" defer></script>
   </body>
 </html>
