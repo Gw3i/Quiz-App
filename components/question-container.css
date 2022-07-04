@@ -16,6 +16,7 @@
 .card__headline {
   text-decoration: underline;
   text-decoration-color: var(--accent-color);
+  text-decoration-thickness: 4px;
 }
 
 .card__text {
@@ -28,9 +29,9 @@
 }
 
 .answer-text {
-  color: red;
   font-size: 1.8rem;
   font-weight: bold;
+  background-color: var(--accent-color);
 }
 
 .answer-text--hidden {

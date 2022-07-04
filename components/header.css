@@ -8,4 +8,5 @@
   font-weight: bold;
   text-decoration: underline;
   text-decoration-color: var(--accent-color);
+  text-decoration-thickness: 4px;
 }
