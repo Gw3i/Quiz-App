@@ -19,10 +19,10 @@
   <body>
     <main class="content">
       <h2 class="content__headline">Create your question card</h2>
-      <form class="form" action="" class="question__form" method="get">
+      <form class="form question__form" action="" method="get">
         <label class="question-headline" for="question-text">Add your question</label>
         <textarea
-          name="question-text"
+          name="questionText"
           id="question-text"
           rows="5"
           cols="40"
@@ -30,20 +30,18 @@
         ></textarea>
         <label class="question-headline" for="answer-text">Add your answer</label>
         <textarea
-          name="answer-text"
+          name="answerText"
           id="answer-text"
           rows="5"
           cols="40"
           placeholder="Enter your question"
         ></textarea>
-        <label class="question-headline" for="tag-text">Add tags devie by comma</label>
-        <textarea
-          name="tag-text"
+        <label class="question-headline" for="tag-text">Add tags devided by comma</label>
+        <input
+          name="tagText"
           id="tag-text"
-          rows="1"
-          cols="40"
           placeholder="Enter your question"
-        ></textarea>
+        ></input>
         <div class="btn-container">
         <input class="submit-btn" type="submit" value="Submit" />
         </div>

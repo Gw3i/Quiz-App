@@ -1,6 +1,7 @@
 .icon {
   position: absolute;
-  top: -25px;
+  top: -13px;
   right: 10px;
   background-color: white;
+  border: none;
 }

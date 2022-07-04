@@ -10,6 +10,7 @@
   box-shadow: var(--box-shadow);
   margin-bottom: 50px;
   width: 100%;
+  max-width: 500px;
 }
 
 .card__text {
