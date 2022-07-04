@@ -1,4 +1,4 @@
-.btn {
+.btn, .submit-btn {
   padding: 10px 30px;
   border-radius: 10px;
   background-color: lightsalmon;
@@ -10,4 +10,14 @@
 .btn:hover {
   background-color: salmon;
   border: 1px solid black;
+}
+
+.submit-btn {
+  margin-top: 30px;
+  
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
 }

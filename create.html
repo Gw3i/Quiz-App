@@ -17,11 +17,10 @@
     <h1 class="headline">Create Question</h1>
   </header>
   <body>
-    <main class="create__content">
-      <h2>Create your question card</h2>
-      <p>Add your question</p>
-      <form action="" class="question__form" method="get">
-        <label for="question-text">Question</label>
+    <main class="content">
+      <h2 class="content__headline">Create your question card</h2>
+      <form class="form" action="" class="question__form" method="get">
+        <label class="question-headline" for="question-text">Add your question</label>
         <textarea
           name="question-text"
           id="question-text"
@@ -29,8 +28,7 @@
           cols="40"
           placeholder="Enter your question"
         ></textarea>
-        <p>Add your answer</p>
-        <label for="answer-text">Answer</label>
+        <label class="question-headline" for="answer-text">Add your answer</label>
         <textarea
           name="answer-text"
           id="answer-text"
@@ -38,8 +36,7 @@
           cols="40"
           placeholder="Enter your question"
         ></textarea>
-        <p>Add tags devided by comma</p>
-        <label for="tag-text">Answer</label>
+        <label class="question-headline" for="tag-text">Add tags devie by comma</label>
         <textarea
           name="tag-text"
           id="tag-text"
@@ -47,7 +44,9 @@
           cols="40"
           placeholder="Enter your question"
         ></textarea>
+        <div class="btn-container">
         <input class="submit-btn" type="submit" value="Submit" />
+        </div>
       </form>
     </main>
     <nav>
