@@ -32,6 +32,9 @@
   font-size: 1.8rem;
   font-weight: bold;
   background-color: var(--accent-color);
+  color: var(--light-color);
+  margin-top: 20px;
+  padding: 10px;
 }
 
 .answer-text--hidden {
