@@ -7,3 +7,14 @@
 @import "/components/tags.css";
 @import "/base.css";
 @import "/components/utility.css";
+
+
+.avatar-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.avatar__img {
+    width: 100px;
+}
+
