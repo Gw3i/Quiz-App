@@ -1,6 +1,7 @@
 .tag-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
   padding: 0;
   margin: 40px 0 0 0;
@@ -11,7 +12,7 @@
   border-radius: var(--border-rounded);
   padding: 5px;
   background-color: var(--light-color);
-}
+} 
 
 .tag:hover {
   box-shadow: 2px 2px 0 0 var(--dark-color);

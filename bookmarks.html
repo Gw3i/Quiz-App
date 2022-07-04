@@ -19,26 +19,61 @@
     </header>
     <main class="content">
       <article class="card">
-        <section class="card__text">
-          <h2>Question:</h2>
-          <a href="#"
-            ><img
+        <div class="card__text">
+          <h2 class="card__headline">Question:</h2>
+          <button type="button" class="icon">
+            <img
               class="bookmark__icon icon icon--filled"
               src="/images/bookmark-filled.svg"
               alt="bookmark icon"
-          /></a>
-          <p>Who would win in a fight between Superman and Batman?</p>
-          <p class="answer-text answer-text--hidden">I don't know</p>
-        </section>
-        <section class="card__btn__section">
-          <button class="btn btn--shadow">Show answer</button>
+            />
+          </button>
+          <p>Why is water blue?</p>
+          <p class="answer-text answer-text--hidden" data-js="answer-text">
+            I don't know
+          </p>
+        </div>
+        <div class="card__btn__section">
+          <button class="btn btn--shadow" data-js="answer-btn" type="button">
+            Show answer
+          </button>
           <ul class="tag-list">
-            <a href=""><li class="tag btn--shadow">superheroes</li></a>
-            <a href=""><li class="tag btn--shadow">fighting</li></a>
-            <a href="#"><li class="tag btn--shadow">comics</li></a>
-            <a href="#"><li class="tag btn--shadow">science-fiction</li></a>
+            <li class="tag"><button type="button">water</button></li>
+            <li class="tag"><button type="button">biology</button></li>
+            <li class="tag"><button type="button">nature</button></li>
+            <li class="tag"><button type="button">colors</button></li>
+            <li class="tag"><button type="button">oceans</button></li>
           </ul>
-        </section>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__text">
+          <h2 class="card__headline">Question:</h2>
+          <button type="button" class="icon">
+            <img
+              class="bookmark__icon icon icon--filled"
+              src="/images/bookmark.svg"
+              alt="bookmark icon"
+            />
+          </button>
+          <p>Why are we here?</p>
+          <p class="answer-text answer-text--hidden" data-js="answer-text">
+            42
+          </p>
+        </div>
+        <div class="card__btn__section">
+          <button class="btn btn--shadow" data-js="answer-btn" type="button">
+            Show answer
+          </button>
+          <ul class="tag-list">
+            <li class="tag"><button type="button">purpose</button></li>
+            <li class="tag"><button type="button">biology</button></li>
+            <li class="tag"><button type="button">nature</button></li>
+            <li class="tag"><button type="button">history</button></li>
+            <li class="tag"><button type="button">science-fiction</button></li>
+          </ul>
+        </div>
       </article>
     </main>
     <nav>
