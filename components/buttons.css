@@ -1,15 +1,14 @@
 .btn, .submit-btn {
   padding: 10px 30px;
   border-radius: 10px;
-  background-color: lightsalmon;
+  background-color: var(--accent-color);
   border: none;
   color: white;
   font-weight: bold;
 }
 
 .btn:hover {
-  background-color: salmon;
-  border: 1px solid black;
+  border: 1px solid var(--darker-accent);
 }
 
 .submit-btn {

@@ -13,6 +13,11 @@
   max-width: 500px;
 }
 
+.card__headline {
+  text-decoration: underline;
+  text-decoration-color: var(--accent-color);
+}
+
 .card__text {
   max-width: 250px;
 }

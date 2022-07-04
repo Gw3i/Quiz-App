@@ -1,5 +1,4 @@
 .btn--shadow:hover {
-  box-shadow: 2px 2px 0 0 salmon;
+  box-shadow: 2px 2px 0 0 var(--darker-accent);
   transition: 0.1s;
-  border: 2px solid lightsalmon;
 }

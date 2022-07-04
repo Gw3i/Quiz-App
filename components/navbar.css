@@ -9,7 +9,7 @@ nav {
   justify-content: space-evenly;
   position: fixed;
   bottom: 0;
-  background-color: white;
+  background-color: var(--light-color);
 }
 .nav__list {
   display: flex;

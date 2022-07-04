@@ -7,18 +7,21 @@ body {
   padding: 0px;
   font-size: 62, 5%;
   font-family: var(--font);
+  background-color: var(--light-color);
+  color: #161616;
 }
 
 :root {
   --border-rounded: 5px;
   --font: "Nunito Sans", sans-serif;
 
-  --light-color: rgb(204, 205, 220);
-  --medium-color: rgb(112, 118, 132);
-  --dark-color: rgb(30, 30, 30);
-  --contrast-color: white;
+  --light-color: #fff9f1;
+  --medium-color: #fbe8ce;
+  --dark-color: #f8d19c;
+  --contrast-color: #161616;
 
-  --accent-color: #57cc99;
+  --accent-color: #6ba1a0;
+  --darker-accent: #335351;
 
   --box-shadow: 2px 3px 1px 0 black;
 }

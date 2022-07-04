@@ -7,14 +7,13 @@
 }
 .tag {
   list-style: none;
-  border: 2px solid;
+  border: 2px solid var(--dark-color);
   border-radius: var(--border-rounded);
   padding: 5px;
-  background-color: white;
+  background-color: var(--light-color);
 }
 
 .tag:hover {
-  box-shadow: 2px 2px 0 0 salmon;
+  box-shadow: 2px 2px 0 0 var(--dark-color);
   transition: 0.1s;
-  border: 2px solid lightsalmon;
 }
