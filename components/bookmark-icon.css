@@ -1,7 +1,12 @@
-.icon {
+.bookmark-icon {
   position: absolute;
-  top: -13px;
+  top: -25px;
   right: 10px;
   background-color: white;
   border: none;
+}
+
+
+.bookmark-icon--active {
+  display: none;
 }

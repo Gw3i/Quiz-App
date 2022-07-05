@@ -21,11 +21,17 @@
       <article class="card">
         <div class="card__text">
           <h2 class="card__headline">Question:</h2>
-          <button type="button" class="icon">
+          <button type="button" class="icon" data-js="bookmark-button">
             <img
-              class="bookmark__icon icon icon--filled"
+              class="bookmark-icon icon"
               src="/images/bookmark.svg"
               alt="bookmark icon"
+            />
+            <img
+              class="bookmark-icon icon bookmark-icon--active"
+              src="/images/bookmark-filled.svg"
+              alt="bookmark icon"
+              data-js="bookmark-filled"
             />
           </button>
           <p>Who would win in a fight between Superman and Batman?</p>
@@ -34,10 +40,9 @@
           <button class="btn btn--shadow" data-js="answer-btn" type="button">
             Show answer
           </button>
-          <div class="answer-text answer-text--hidden" data-js="answer-text"><p>
-            I don't know
-          </p>
-        </div>
+          <div class="answer-text answer-text--hidden" data-js="answer-text">
+            <p>I don't know</p>
+          </div>
           <ul class="tag-list">
             <li class="tag"><button type="button">superheroes</button></li>
             <li class="tag"><button type="button">fighting</button></li>
@@ -52,7 +57,7 @@
           <h2 class="card__headline">Question:</h2>
           <button type="button" class="icon">
             <img
-              class="bookmark__icon icon icon--filled"
+              class="bookmark-icon icon bookmark-icon--active"
               src="/images/bookmark.svg"
               alt="bookmark icon"
             />
@@ -81,7 +86,7 @@
           <h2 class="card__headline">Question:</h2>
           <button type="button" class="icon">
             <img
-              class="bookmark__icon icon icon--filled"
+              class="bookmark-icon icon bookmark-icon--active"
               src="/images/bookmark.svg"
               alt="bookmark icon"
             />
@@ -112,7 +117,7 @@
           <h2 class="card__headline">Question:</h2>
           <button type="button" class="icon">
             <img
-              class="bookmark__icon icon icon--filled"
+              class="bookmark-icon icon bookmark-icon--active"
               src="/images/bookmark.svg"
               alt="bookmark icon"
             />
@@ -142,7 +147,7 @@
           <h2 class="card__headline">Question:</h2>
           <button type="button" class="icon">
             <img
-              class="bookmark__icon icon icon--filled"
+              class="bookmark-icon icon bookmark-icon--active"
               src="/images/bookmark.svg"
               alt="bookmark icon"
             />
