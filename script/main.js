@@ -2,15 +2,15 @@ console.clear();
 
 // Show Answer Button //
 const answerButton = document.querySelector('[data-js="answer-btn"]');
-const answer = document.querySelector('[data-js="answer-text"]');
+const answer = document.querySelector('[data-js="answer-container"]');
 
 console.log(answerButton);
 console.log(answer);
 
 answerButton.addEventListener("click", () => {
   console.log("Button clicked!");
-  answer.classList.toggle("answer-text--hidden");
-  if (answer.classList.contains("answer-text--hidden")) {
+  answer.classList.toggle("answer-container--hidden");
+  if (answer.classList.contains("answer-container--hidden")) {
     console.log("It works!");
     answerButton.textContent = "Show answer";
   } else {

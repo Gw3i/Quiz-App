@@ -40,8 +40,12 @@
           <button class="btn btn--shadow" data-js="answer-btn" type="button">
             Show answer
           </button>
-          <div class="answer-text answer-text--hidden" data-js="answer-text">
-            <p>I don't know</p>
+          <div
+            class="answer-container answer-container--hidden"
+            data-js="answer-container"
+          >
+            <img class="answer__icon" src="/images/info.svg" alt="info text button" />
+            <p class="answer-text">I don't know, maybe have to see the movie  ¯\_(ツ)_/¯</p>
           </div>
           <ul class="tag-list">
             <li class="tag"><button type="button">superheroes</button></li>
@@ -55,120 +59,42 @@
       <article class="card">
         <div class="card__text">
           <h2 class="card__headline">Question:</h2>
-          <button type="button" class="icon">
+          <button type="button" class="icon" data-js="bookmark-button">
             <img
-              class="bookmark-icon icon bookmark-icon--active"
+              class="bookmark-icon icon"
               src="/images/bookmark.svg"
               alt="bookmark icon"
             />
+            <img
+              class="bookmark-icon icon bookmark-icon--active"
+              src="/images/bookmark-filled.svg"
+              alt="bookmark icon"
+              data-js="bookmark-filled"
+            />
           </button>
-          <p>Why is water blue?</p>
-          <p class="answer-text answer-text--hidden" data-js="answer-text">
-            I don't know
-          </p>
+          <p>Who would win in a fight between Superman and Batman?</p>
         </div>
         <div class="card__btn__section">
           <button class="btn btn--shadow" data-js="answer-btn" type="button">
             Show answer
           </button>
+          <div
+            class="answer-container answer-container--hidden"
+            data-js="answer-container"
+          >
+            <img src="/images/info.svg" alt="info text button" />
+            <p class="answer-text">I don't know</p>
+          </div>
           <ul class="tag-list">
-            <li class="tag"><button type="button">water</button></li>
-            <li class="tag"><button type="button">biology</button></li>
-            <li class="tag"><button type="button">nature</button></li>
-            <li class="tag"><button type="button">colors</button></li>
-            <li class="tag"><button type="button">oceans</button></li>
+            <li class="tag"><button type="button">superheroes</button></li>
+            <li class="tag"><button type="button">fighting</button></li>
+            <li class="tag"><button type="button">superman</button></li>
+            <li class="tag"><button type="button">batman</button></li>
           </ul>
         </div>
       </article>
 
-      <article class="card">
-        <div class="card__text">
-          <h2 class="card__headline">Question:</h2>
-          <button type="button" class="icon">
-            <img
-              class="bookmark-icon icon bookmark-icon--active"
-              src="/images/bookmark.svg"
-              alt="bookmark icon"
-            />
-          </button>
-          <p>Who was the first man on the moon</p>
-          <p class="answer-text answer-text--hidden" data-js="answer-text">
-            On July 20, 1969, Neil Armstrong became the first human to step on
-            the moon.
-          </p>
-        </div>
-        <div class="card__btn__section">
-          <button class="btn btn--shadow" data-js="answer-btn" type="button">
-            Show answer
-          </button>
-          <ul class="tag-list">
-            <li class="tag"><button type="button">space</button></li>
-            <li class="tag"><button type="button">science-fiction</button></li>
-            <li class="tag"><button type="button">history</button></li>
-            <li class="tag"><button type="button">future</button></li>
-            <li class="tag"><button type="button">usa</button></li>
-            <li class="tag"><button type="button">rockets</button></li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card__text">
-          <h2 class="card__headline">Question:</h2>
-          <button type="button" class="icon">
-            <img
-              class="bookmark-icon icon bookmark-icon--active"
-              src="/images/bookmark.svg"
-              alt="bookmark icon"
-            />
-          </button>
-          <p>Where was Napoleon Bonaparte born?</p>
-          <p class="answer-text answer-text--hidden" data-js="answer-text">
-            Napoleon was born on Corsica shortly after the island's cession to
-            France by the Genoese.
-          </p>
-        </div>
-        <div class="card__btn__section">
-          <button class="btn btn--shadow" data-js="answer-btn" type="button">
-            Show answer
-          </button>
-          <ul class="tag-list">
-            <li class="tag"><button type="button">war</button></li>
-            <li class="tag"><button type="button">history</button></li>
-            <li class="tag"><button type="button">france</button></li>
-            <li class="tag"><button type="button">europe</button></li>
-            <li class="tag"><button type="button">europe</button></li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card__text">
-          <h2 class="card__headline">Question:</h2>
-          <button type="button" class="icon">
-            <img
-              class="bookmark-icon icon bookmark-icon--active"
-              src="/images/bookmark.svg"
-              alt="bookmark icon"
-            />
-          </button>
-          <p>Who discovered penicillin?</p>
-          <p class="answer-text answer-text--hidden" data-js="answer-text">
-            Alexander Fleming
-          </p>
-        </div>
-        <div class="card__btn__section">
-          <button class="btn btn--shadow" data-js="answer-btn" type="button">
-            Show answer
-          </button>
-          <ul class="tag-list">
-            <li class="tag"><button type="button">history</button></li>
-            <li class="tag"><button type="button">medicin</button></li>
-            <li class="tag"><button type="button">healthcare</button></li>
-            <li class="tag"><button type="button">biology</button></li>
-          </ul>
-        </div>
-      </article>
+      
     </main>
     <nav>
       <ul class="nav__list">
