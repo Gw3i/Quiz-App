@@ -18,8 +18,7 @@
       <h1 class="headline">QUIZ-APP</h1>
     </header>
     <main class="content">
-      <article class="card">
-        <div class="card__text">
+      <article class="card" data-js="card">
           <h2 class="card__headline">Question:</h2>
           <button type="button" class="icon" data-js="bookmark-button">
             <img
@@ -35,7 +34,6 @@
             />
           </button>
           <p>What kind of animal is a Dolphin?</p>
-        </div>
         <div class="card__btn__section">
           <button class="btn btn--shadow" data-js="answer-btn" type="button">
             Show answer
@@ -89,6 +87,11 @@
         </li>
       </ul>
     </nav>
+    <script
+      src="/components/question-card/card.js"
+      defer
+      type="module"
+    ></script>
     <script src="/script/index.js" defer type="module"></script>
   </body>
 </html>
