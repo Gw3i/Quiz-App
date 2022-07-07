@@ -1,8 +1,11 @@
 .avatar-container {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-  }
-  .avatar__img {
-    width: 100px;
-  }
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.avatar__img {
+  width: 200px;
+  height: 200px;
+  border: 2px solid var(--accent-color);
+  border-radius: 100%;
+}
