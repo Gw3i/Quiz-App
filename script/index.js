@@ -1,5 +1,3 @@
-console.clear();
-
 // Show Answer Button //
 const answerButton = document.querySelector('[data-js="answer-btn"]');
 const answer = document.querySelector('[data-js="answer-container"]');
