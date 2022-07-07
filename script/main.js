@@ -4,19 +4,17 @@ console.clear();
 const answerButton = document.querySelector('[data-js="answer-btn"]');
 const answer = document.querySelector('[data-js="answer-container"]');
 
-console.log(answerButton);
-console.log(answer);
+let isShown = false;
 
 answerButton.addEventListener("click", () => {
-  console.log("Button clicked!");
-  answer.classList.toggle("answer-container--hidden");
-  if (answer.classList.contains("answer-container--hidden")) {
-    console.log("It works!");
-    answerButton.textContent = "Show answer";
+  isShown = !isShown;
+  if (isShown) {
+    answerButton.innerText = "Hide answer";
   } else {
-    console.log("That too!");
-    answerButton.textContent = "Hide answer";
+    answerButton.innerText = "Show answer";
   }
+
+  answer.classList.toggle("answer-container--hidden");
 });
 
 // Fill Bookmark //
