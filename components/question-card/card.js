@@ -1,9 +1,3 @@
-import Bookmark from "../bookmarks/bookmarks.js";
-import QuestionCard from "../question-card/question-card.js";
-
-const bookmark = Bookmark();
-const showAnswer = QuestionCard();
-
 const questionCards = [
   {
     question: "What kind of animal is a Dolphin?",
@@ -22,15 +16,20 @@ const questionCards = [
   },
 ];
 
+// get main
+const main = document.querySelector('[data-js="content"]');
+
 questionCards.forEach((card) => {
   // get card container
-  const cardContainer = document.querySelector('[data-js="card"]');
-  document.body.append(cardContainer);
+  const cardContainer = document.createElement("article");
+  cardContainer.classList.add("card");
+  main.append(cardContainer);
   // get question text and change question
-  const questionText = document.querySelector(
-    '[data-js="card__question-text"]'
-  );
+  const questionText = document.createElement("p");
+  questionText.classList.add("card__question-text");
   questionText.innerText = card.question;
+  cardContainer.append(questionText);
+  
 
   // get answer
   const answer = document.querySelector('[data-js="answer-text"]');
