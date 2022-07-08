@@ -24,12 +24,18 @@ questionCards.forEach((card) => {
   const cardContainer = document.createElement("article");
   cardContainer.classList.add("card");
   main.append(cardContainer);
+
+  // add Question h2
+  const questionHeadline = document.createElement("h2");
+  questionHeadline.innerText = "Question";
+  questionHeadline.classList.add("card__headline");
+  cardContainer.append(questionHeadline);
+
   // get question text and change question
   const questionText = document.createElement("p");
   questionText.classList.add("card__question-text");
   questionText.innerText = card.question;
   cardContainer.append(questionText);
-  
 
   // get answer
   const answer = document.querySelector('[data-js="answer-text"]');
