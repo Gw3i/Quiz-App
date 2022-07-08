@@ -29,7 +29,7 @@
               alt="bookmark icon"
             />
             <img
-              class="bookmark-icon icon bookmark-icon--active"
+              class="bookmark-icon icon icon--active"
               src="/images/bookmark-filled.svg"
               alt="bookmark icon"
               data-js="bookmark-filled"
@@ -60,6 +60,8 @@
           </ul>
         </div>
       </article>
+
+
       <article class="card" data-js="card">
         <h2 class="card__headline">Question:</h2>
         <button type="button" class="icon" data-js="bookmark-button">
@@ -69,7 +71,7 @@
             alt="bookmark icon"
           />
           <img
-            class="bookmark-icon icon bookmark-icon--active"
+            class="bookmark-icon icon icon--active"
             src="/images/bookmark-filled.svg"
             alt="bookmark icon"
             data-js="bookmark-filled"
@@ -219,38 +221,59 @@
     <!--------- Nav --------->
     <nav>
       <ul class="nav__list">
-        <li class="nav__icons">
-          <button class="nav__links" type="button" data-js="nav-button">
-            <img src="/images/home-filled.svg" alt="home icon" />
+        <li class="nav__icons" data-js="nav-list">
+          <button class="nav__links homeButton" type="button" data-js="nav-button">
+            <img src="/images/home.svg" alt="home icon" />
+            <img
+            class="nav__icon icon icon--active"
+            src="/images/home-filled.svg"
+            alt="bookmark icon"
+            data-js="icon--filled"
+          />
             <p class="nav__links__text">Home</p></button
           >
         </li>
-        <li class="nav__icons">
-          <button class="nav__links" type="button" data-js="nav-button">
-            <img src="/images/bookmark.svg" alt="bookmark icon" />
+        <li class="nav__icons" data-js="nav-list">
+          <button class="nav__links bookmarksButton" type="button" data-js="nav-button">
+            <img src="/images/bookmark.svg" alt="bookmark icon" data-js="nav-icon"/>
+            <img
+            class="nav__icon icon  icon--active"
+            src="/images/bookmark-filled.svg"
+            alt="bookmark icon"
+            data-js="icon--filled"
+          />
             <p class="nav__links__text">Bookmarks</p></button
           >
+          
         </li>
-        <li class="nav__icons">
-          <button class="nav__links" type="button" data-js="nav-button">
+        <li class="nav__icons" data-js="nav-list">
+          <button class="nav__links createButton" type="button" data-js="nav-button">
             <img src="/images/edit.svg" alt="create/edit icon" />
+            <img
+            class="nav__icon icon  icon--active"
+            src="/images/edit-filled.svg"
+            alt="bookmark icon"
+            data-js="icon--filled"
+          />
             <p class="nav__links__text">Create</p></button
           >
         </li>
-        <li class="nav__icons">
-          <button class="nav__links" type="button" data-js="nav-button">
+        <li class="nav__icons" data-js="nav-list">
+          <button class="nav__links profileButton" type="button" data-js="nav-button">
             <img src="/images/account_circle.svg" alt="account icon" />
+            <img
+            class="nav__icon icon  icon--active"
+            src="/images/account_circle-filled.svg"
+            alt="bookmark icon"
+            data-js="icon--filled"
+          />
             <p class="nav__links__text">Profile</p></button
           >
         </li>
       </ul>
     </nav>
      <!--------- END Nav --------->
-    <script
-      src="/components/question-card/card.js"
-      defer
-      type="module"
-    ></script>
+  
     <script src="/script/index.js" defer type="module"></script>
   </body>
 </html>
