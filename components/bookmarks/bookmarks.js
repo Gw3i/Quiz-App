@@ -1,8 +1,16 @@
 export default function Bookmark() {
-  const bookmarkButton = document.querySelector('[data-js="bookmark-button"');
-  const bookmarkFilled = document.querySelector('[data-js="bookmark-filled"');
+  const cardList = document.querySelectorAll('[data-js="card"');
+  console.log(cardList);
 
-  bookmarkButton.addEventListener("click", () => {
-    bookmarkFilled.classList.toggle("bookmark-icon--active");
+  cardList.forEach((card) => {
+    const bookmarkButton = card.querySelector('[data-js="bookmark-button"]');
+    const bookmarkFilled = card.querySelector('[data-js="bookmark-filled"]');
+
+    bookmarkButton.addEventListener("click", () => {
+      bookmarkFilled.classList.toggle("bookmark-icon--active");
+    });
+
+    console.log(bookmarkButton);
+    console.log(bookmarkFilled);
   });
 }
