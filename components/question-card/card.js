@@ -1,4 +1,4 @@
-export default function QuestionCards() {
+export default function CreateCards() {
   // const questionCards = [
   //   {
   //     question: "What kind of animal is a Dolphin?",
