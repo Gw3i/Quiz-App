@@ -59,6 +59,10 @@ export default function SwitchPages() {
         bookmarkPage.classList.remove("page--hidden");
       } else if (navButton.classList.contains("homeButton")) {
         homePage.classList.remove("page--hidden");
+      } else if (navButton.classList.contains("createButton")) {
+        createPage.classList.remove("page--hidden");
+      } else if (navButton.classList.contains("profileButton")) {
+        profilePage.classList.remove("page--hidden");
       }
     });
   });
