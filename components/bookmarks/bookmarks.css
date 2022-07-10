@@ -11,3 +11,7 @@
 .icon--active {
   display: none;
 }
+
+.bookmark--filled {
+fill: #161616;
+}
