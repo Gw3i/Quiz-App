@@ -3,14 +3,6 @@ export default function SwitchPages() {
 
   // Nav
   const navList = document.querySelectorAll('[data-js="nav-list"]');
-  // Buttons
-  // const homeButton = document.querySelector('[data-js="nav-button"]');
-  // const bookmarkButton = document.querySelector('[data-js="nav-button"]');
-  const createButton = document.querySelector('[data-js="nav__create-button"]');
-  const profileButton = document.querySelector(
-    '[data-js="nav__profile-button"]'
-  );
-
   // Pages
   const homePage = document.querySelector('[data-js="home-page"]');
   const bookmarkPage = document.querySelector('[data-js="bookmark-page"]');
