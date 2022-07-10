@@ -23,7 +23,6 @@ export default function Create() {
   ];
 
   const main = document.querySelector('[data-js="content"]');
-  //   const headline = document.querySelector('[data-js="card__healine"]');
 
   questionCards.forEach((questionCard) => {
     const card = document.createElement("article");
@@ -71,15 +70,17 @@ export default function Create() {
     const answerText = questionCard.answer;
 
     const tagList = document.createElement("ul");
+    tagList.classList.add("tag-list");
     const tagsListButtons = document.createElement("button");
-    // tagsListButtons.innerText = questionCard.tags;
-    // tagsListButtons.classList.add("tag");
 
-    // const tags = questionCard.tags;
-    // tags.forEach((tag) => {
-    //   const tagItemList = document.createElement("li");
-    //   tagItemList.innerText = tags;
-    // });
+    // Tag list
+
+    questionCard.tags.forEach((tag) => {
+      const tagItem = document.createElement("li");
+      tagList.append(tagItem);
+      tagItem.innerText = tag;
+      tagItem.classList.add("tag");
+    });
 
     main.append(card);
     card.append(
