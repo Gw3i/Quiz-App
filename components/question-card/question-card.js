@@ -1,17 +1,23 @@
-export default function QuestionCrad() {
-  const answerButton = document.querySelector('[data-js="answer-btn"]');
-  const answer = document.querySelector('[data-js="answer-container"]');
+export default function QuestionCard() {
+  const cardList = document.querySelectorAll('[data-js="card"]');
+  
+
 
   let isShown = false;
 
-  answerButton.addEventListener("click", () => {
-    isShown = !isShown;
-    if (isShown) {
-      answerButton.innerText = "Hide answer";
-    } else {
-      answerButton.innerText = "Show answer";
-    }
+  cardList.forEach((card) => {
+    const button = card.querySelector('[data-js="answer-btn"]');
+    const answerText = card.querySelector('[data-js="answer-container"]');
 
-    answer.classList.toggle("answer-container--hidden");
+    button.addEventListener("click", () => {
+      isShown = !isShown;
+      if (isShown) {
+        button.innerText = "Hide answer";
+      } else {
+        button.innerText = "Show answer";
+      }
+
+      answerText.classList.toggle("answer-container--hidden");
+    });
   });
 }

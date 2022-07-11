@@ -17,9 +17,11 @@
     <header class="header">
       <h1 class="headline">QUIZ-APP</h1>
     </header>
-    <main class="content">
-      <article class="card" data-js="card">
-          <h2 class="card__headline">Question:</h2>
+    <main class="content" data-js="content">
+       <!--------- Home Page --------->
+       <div class="home-page" data-js="home-page">
+      <!-- <article class="card" data-js="card">
+          <h2 class="card__headline" data-js="card__healine">Question:</h2>
           <button type="button" class="icon" data-js="bookmark-button">
             <img
               class="bookmark-icon icon"
@@ -27,13 +29,13 @@
               alt="bookmark icon"
             />
             <img
-              class="bookmark-icon icon bookmark-icon--active"
+              class="bookmark-icon icon icon--active"
               src="/images/bookmark-filled.svg"
               alt="bookmark icon"
               data-js="bookmark-filled"
             />
           </button>
-          <p>What kind of animal is a Dolphin?</p>
+          <p class="card__question-text" data-js="card__question-text">What kind of animal is a Dolphin?</p>
         <div class="card__btn__section">
           <button class="btn btn--shadow" data-js="answer-btn" type="button">
             Show answer
@@ -47,51 +49,192 @@
               src="/images/info.svg"
               alt="info text button"
             />
-            <p class="answer-text">Dolphins are mammals, not fish.</p>
+            <p class="answer-text" data-js="answer-text">Dolphins are mammals, not fish.</p>
           </div>
-          <ul class="tag-list">
-            <li class="tag"><button type="button">animals</button></li>
-            <li class="tag"><button type="button">sea</button></li>
-            <li class="tag"><button type="button">fish</button></li>
-            <li class="tag"><button type="button">biology</button></li>
-            <li class="tag"><button type="button">sealife</button></li>
+          <ul class="tag-list" data-js="tag-list">
+            <li class="tag" data-js="tag"><button type="button">animals</button></li>
+            <li class="tag" data-js="tag"><button type="button">sea</button></li>
+            <li class="tag" data-js="tag"><button type="button">fish</button></li>
+            <li class="tag" data-js="tag"><button type="button">biology</button></li>
+            <li class="tag" data-js="tag"><button type="button">sealife</button></li>
           </ul>
         </div>
+      </article> -->
+
+
+    
+    </div>
+      <!--------- END Home Page --------->
+
+    <!--------- Bookmarks Page --------->
+    <div class="bookmark-page page--hidden" data-js="bookmark-page">
+    <article class="card">
+      <div class="card__text">
+        <h2 class="card__headline">Question:</h2>
+        <button type="button" class="icon" data-js="bookmark-button">
+          <img
+            class="bookmark-icon icon"
+            src="/images/bookmark.svg"
+            alt="bookmark icon"
+          />
+          <img
+            class="bookmark-icon icon bookmark-icon--active"
+            src="/images/bookmark-filled.svg"
+            alt="bookmark icon"
+            data-js="bookmark-filled"
+          />
+        </button>
+        <p>Who would win in a fight between Superman and Batman?</p>
+      </div>
+      <div class="card__btn__section">
+        <button class="btn btn--shadow" data-js="answer-btn" type="button">
+          Show answer
+        </button>
+        <div
+          class="answer-container answer-container--hidden"
+          data-js="answer-container"
+        >
+          <img
+            class="answer__icon"
+            src="/images/info.svg"
+            alt="info text button"
+          />
+          <p class="answer-text">
+            I don't know, maybe have to see the movie ¯\_(ツ)_/¯
+          </p>
+        </div>
+        <ul class="tag-list">
+          <li class="tag"><button type="button">superheroes</button></li>
+          <li class="tag"><button type="button">fighting</button></li>
+          <li class="tag"><button type="button">superman</button></li>
+          <li class="tag"><button type="button">batman</button></li>
+        </ul>
+      </div>
+    </article>
+  </div>
+    <!--------- END Bookmarks Page --------->
+
+    <!--------- Create Page --------->
+    <div class="create-page page--hidden" data-js="create-page">
+    <h2 class="content__headline">Create your question card</h2>
+      <form class="form question__form" action="" method="get">
+        <label class="question-headline" for="question-text">Add your question</label>
+        <textarea
+          name="questionText"
+          id="question-text"
+          rows="5"
+          cols="40"
+          placeholder="Enter your question"
+        ></textarea>
+        <label class="question-headline" for="answer-text">Add your answer</label>
+        <textarea
+          name="answerText"
+          id="answer-text"
+          rows="5"
+          cols="40"
+          placeholder="Enter your question"
+        ></textarea>
+        <label class="question-headline" for="tag-text">Add tags devided by comma</label>
+        <input
+          name="tagText"
+          id="tag-text"
+          placeholder="Enter your question"
+        ></input>
+        <div class="btn-container">
+        <input class="submit-btn btn btn--shadow" type="submit" value="Submit" />
+        </div>
+      </form>
+    </div>
+      <!--------- END Create Page --------->
+
+      <!--------- Profile Page --------->
+      <div class="profile-page page--hidden" data-js="profile-page">
+      <section class="avatar-container">
+        <article class="avatar">
+          <img
+            class="avatar__img"
+            src="/images/peep-19.svg"
+            alt="profile pic"
+          />
+          <h2 class="avatar__name">Pika Chu</h2>
+        </article>
+      </section>
+      <article class="about-text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+        distinctio consequuntur aperiam nam rem ad earum nesciunt cupiditate
+        quas nobis quisquam ipsa nihil dolore, dicta neque architecto facilis
+        ducimus nemo.
       </article>
+      <article class="skill-tags">
+        <ul class="tag-list">
+          <li class="tag">history</li>
+          <li class="tag">comic</li>
+          <li class="tag">food</li>
+          <li class="tag">travel</li>
+          <li class="tag">trains</li>
+        </ul>
+      </article>
+      <button type="button" class="btn submit-btn btn--shadow">Log-out</button>
+    </div>
+      <!--------- END Profile Page --------->
     </main>
+
+    <!--------- Nav --------->
     <nav>
       <ul class="nav__list">
-        <li class="nav__icons">
-          <a class="nav__links" href="/index.html">
-            <img src="/images/home-filled.svg" alt="home icon" />
-            <p class="nav__links__text">Home</p></a
+        <li class="nav__icons" data-js="nav-list">
+          <button class="nav__links homeButton" type="button" data-js="nav-button">
+            <img src="/images/home.svg" alt="home icon" />
+            <img
+            class="nav__icon icon icon--active"
+            src="/images/home-filled.svg"
+            alt="bookmark icon"
+            data-js="icon--filled"
+          />
+            <p class="nav__links__text">Home</p></button
           >
         </li>
-        <li class="nav__icons">
-          <a class="nav__links" href="/bookmarks.html">
-            <img src="/images/bookmark.svg" alt="bookmark icon" />
-            <p class="nav__links__text">Bookmarks</p></a
+        <li class="nav__icons" data-js="nav-list">
+          <button class="nav__links bookmarksButton" type="button" data-js="nav-button">
+            <img src="/images/bookmark.svg" alt="bookmark icon" data-js="nav-icon"/>
+            <img
+            class="nav__icon icon  icon--active"
+            src="/images/bookmark-filled.svg"
+            alt="bookmark icon"
+            data-js="icon--filled"
+          />
+            <p class="nav__links__text">Bookmarks</p></button
           >
+          
         </li>
-        <li class="nav__icons">
-          <a class="nav__links" href="/create.html">
+        <li class="nav__icons" data-js="nav-list">
+          <button class="nav__links createButton" type="button" data-js="nav-button">
             <img src="/images/edit.svg" alt="create/edit icon" />
-            <p class="nav__links__text">Create</p></a
+            <img
+            class="nav__icon icon  icon--active"
+            src="/images/edit-filled.svg"
+            alt="bookmark icon"
+            data-js="icon--filled"
+          />
+            <p class="nav__links__text">Create</p></button
           >
         </li>
-        <li class="nav__icons">
-          <a class="nav__links" href="/profiles.html">
+        <li class="nav__icons" data-js="nav-list">
+          <button class="nav__links profileButton" type="button" data-js="nav-button">
             <img src="/images/account_circle.svg" alt="account icon" />
-            <p class="nav__links__text">Profile</p></a
+            <img
+            class="nav__icon icon  icon--active"
+            src="/images/account_circle-filled.svg"
+            alt="bookmark icon"
+            data-js="icon--filled"
+          />
+            <p class="nav__links__text">Profile</p></button
           >
         </li>
       </ul>
     </nav>
-    <script
-      src="/components/question-card/card.js"
-      defer
-      type="module"
-    ></script>
+     <!--------- END Nav --------->
+  
     <script src="/script/index.js" defer type="module"></script>
   </body>
 </html>

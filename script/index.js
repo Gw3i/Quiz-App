@@ -1,5 +1,11 @@
 import Bookmark from "../components/bookmarks/bookmarks.js";
-import QuestionCrad from "../components/question-card/question-card.js";
+import QuestionCard from "../components/question-card/question-card.js";
+import CreateCards from "../components/question-card/card.js";
+import SwitchPages from "../components/nav/nav.js";
+import Create from "../components/create/create.js";
 
 Bookmark();
-QuestionCrad();
+QuestionCard();
+CreateCards();
+SwitchPages();
+Create();

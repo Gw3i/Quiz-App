@@ -5,7 +5,13 @@
   background-color: white;
   border: none;
 }
-
-.bookmark-icon--active {
+.nav__icon {
+  position: absolute;
+}
+.icon--active {
   display: none;
+}
+
+.bookmark--filled {
+fill: #161616;
 }
