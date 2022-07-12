@@ -1,27 +1,61 @@
 export default function Create() {
-  const questionCards = [
-    {
-      question: "What kind of animal is a Dolphin?",
-      answer: "Dolphins are mammals, not fish.",
-      tags: ["animals", "sea", "fish", "biology", "sealife"],
-    },
-    {
-      question: "What is the largest building in the world?",
-      answer: "Burj Khalifa in Dubia. 828m",
-      tags: ["architecture", "buildungs", "skyscrapper", "history", "mankind"],
-    },
-    {
-      question: "What is the capitol of France?",
-      answer: "Paris",
-      tags: ["geography", "europe", "france", "baguette", "croissants"],
-    },
-    {
-      question: "What is the capitol of Japan?",
-      answer: "Tokyo",
-      tags: ["cities", "geography", "japan", "asia"],
-    },
-  ];
+  // const questionCards = [
+  //   {
+  //     question: "What kind of animal is a Dolphin?",
+  //     answer: "Dolphins are mammals, not fish.",
+  //     tags: ["animals", "sea", "fish", "biology", "sealife"],
+  //   },
+  //   {
+  //     question: "What is the largest building in the world?",
+  //     answer: "Burj Khalifa in Dubia. 828m",
+  //     tags: ["architecture", "buildungs", "skyscrapper", "history", "mankind"],
+  //   },
+  //   {
+  //     question: "What is the capitol of France?",
+  //     answer: "Paris",
+  //     tags: ["geography", "europe", "france", "baguette", "croissants"],
+  //   },
+  //   {
+  //     question: "What is the capitol of Japan?",
+  //     answer: "Tokyo",
+  //     tags: ["cities", "geography", "japan", "asia"],
+  //   },
+  //   {
+  //     question: "Why are we here?",
+  //     answer: "42",
+  //     tags: ["life", "mankind", "philosophy", "humans", "alienes"],
+  //   },
+  // ];
 
+  const questionCards = [];
+
+  console.log(questionCards);
+
+  // function to get question out of api
+  function getQuestions(questionObject) {
+    questionObject.map((questionContainer) => {
+      const questionData = {
+        question: questionContainer.question,
+        answer: questionContainer.correct_answer,
+        tags: questionContainer.category,
+      };
+      questionCards.push(questionData);
+    });
+  }
+  // fetch api
+  async function fetchQuestions() {
+    try {
+      const response = await fetch("https://opentdb.com/api.php?amount=10");
+      const questionData = await response.json();
+      getQuestions(questionData.results);
+    } catch (error) {
+      console.error(error.message);
+    }
+  }
+
+  fetchQuestions();
+
+  // Create card
   const main = document.querySelector('[data-js="content"]');
 
   questionCards.forEach((questionCard) => {
@@ -48,7 +82,6 @@ export default function Create() {
 
     // Question text
     const questionText = questionCard.question;
-
     // Answer button
     const answerButtonContainer = document.createElement("div");
     answerButtonContainer.classList.add("card__btn__section");
