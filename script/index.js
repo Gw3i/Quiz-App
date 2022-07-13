@@ -3,6 +3,7 @@ import QuestionCard from "../components/question-card/question-card.js";
 import CreateCards from "../components/question-card/card.js";
 import SwitchPages from "../components/nav/nav.js";
 import Create from "../components/create/create.js";
+import IsBookmarked from "../components/bookmarks/isBookmarked.js";
 
 Bookmark();
 QuestionCard();
