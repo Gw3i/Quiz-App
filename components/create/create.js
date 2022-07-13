@@ -31,7 +31,6 @@ export default function Create() {
         console.log(bookmarkedCards);
 
         bookmarkedCards.forEach((bookmarkedCard) => {
-          headline.innerText = "Question:";
           const bookmarkCardContainer = document.createElement("article");
           bookmarkCardContainer.classList.add("card");
 
