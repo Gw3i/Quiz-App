@@ -3,8 +3,8 @@ export default function Create() {
 
   // // Create card
   const homePage = document.querySelector('[data-js="home-page"]');
+  const bookmarkPage = document.querySelector('[data-js="bookmark-page"]');
 
-  console.log(homePage);
   function iterateThroughCards() {
     questionCards.forEach((questionCard) => {
       const card = document.createElement("article");
@@ -14,12 +14,38 @@ export default function Create() {
       headline.classList.add("card__headline");
       headline.innerText = "Question";
 
-      // Bookmark button
+      // -----------------   Bookmark button ------------------------ //
+      // Need to export!!!
       const bookmark = document.createElement("button");
+
       bookmark.addEventListener("click", () => {
         bookmarkFilled.classList.toggle("icon--active");
+        // if icon--active is not in class that set isBookmarked to true
+        if (bookmarkFilled.className !== "icon--active") {
+          questionCard.isBookmarked = true;
+          console.log(questionCard.isBookmarked);
+        }
+        const bookmarkedCards = questionCards.filter((questionCard) => {
+          return questionCard.isBookmarked === true;
+        });
+        console.log(bookmarkedCards);
+
+        bookmarkedCards.forEach((bookmarkedCard) => {
+          headline.innerText = "Question:";
+          const bookmarkCardContainer = document.createElement("article");
+          bookmarkCardContainer.classList.add("card");
+
+          const bookmarkedQestionText = document.createElement("p");
+          bookmarkedQestionText.innerText = bookmarkedCard.question;
+
+          bookmarkPage.append(bookmarkCardContainer);
+          bookmarkCardContainer.append(bookmarkedQestionText);
+        });
       });
 
+      //
+      //
+      //
       const bookmarkFilled = document.createElement("img");
       bookmarkFilled.src = "/images/bookmark-filled.svg";
       bookmarkFilled.classList.add("bookmark-icon", "icon", "icon--active");
@@ -27,6 +53,8 @@ export default function Create() {
       const bookmarkUnfilled = document.createElement("img");
       bookmarkUnfilled.src = "/images/bookmark.svg";
       bookmarkUnfilled.classList.add("bookmark-icon", "icon");
+
+      // If bookmark is filled, change isBookmarked to true
 
       // Question text
       const questionText = questionCard.question;
@@ -67,7 +95,6 @@ export default function Create() {
 
       // Tag list
       // !!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      console.log(questionCard);
       questionCard.tags.forEach((tag) => {
         const tagItem = document.createElement("li");
         tagList.append(tagItem);
@@ -75,6 +102,7 @@ export default function Create() {
         tagItem.classList.add("tag");
       });
 
+      //  Append to home page
       homePage.append(card);
       card.append(
         headline,
@@ -99,6 +127,7 @@ export default function Create() {
         question: questionData.question,
         answer: questionData.correct_answer,
         tags: [questionData.category, questionData.difficulty],
+        isBookmarked: false,
       };
     });
   }
@@ -110,7 +139,6 @@ export default function Create() {
       getQuestions(questionData.results);
       // Weil ascynchron, daher function zu card erstellen hier rein
       iterateThroughCards();
-      console.log(questionData);
     } catch (error) {
       console.error(error.message);
     }
