@@ -2,8 +2,9 @@ export default function Create() {
   let questionCards = [];
 
   // // Create card
-  const main = document.querySelector('[data-js="content"]');
+  const homePage = document.querySelector('[data-js="home-page"]');
 
+  console.log(homePage);
   function iterateThroughCards() {
     questionCards.forEach((questionCard) => {
       const card = document.createElement("article");
@@ -74,7 +75,7 @@ export default function Create() {
         tagItem.classList.add("tag");
       });
 
-      main.append(card);
+      homePage.append(card);
       card.append(
         headline,
         bookmark,
@@ -92,7 +93,7 @@ export default function Create() {
 
   // Get questions out of API
   function getQuestions(questionObject) {
-    // Mapen questionCards weil ein array erstellt wird den wir dann benutzen 
+    // Mapen questionCards weil ein array erstellt wird den wir dann benutzen
     questionCards = questionObject.map((questionData) => {
       return {
         question: questionData.question,
