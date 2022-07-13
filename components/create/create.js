@@ -1,5 +1,5 @@
 export default function Create() {
-  const questionCards = [];
+  let questionCards = [];
 
   // // Create card
   const main = document.querySelector('[data-js="content"]');
@@ -35,7 +35,18 @@ export default function Create() {
       const answerButton = document.createElement("button");
       answerButton.classList.add("btn", "btn--shadow");
       answerButton.innerText = "Show answer";
+
+      // Show / Hide function
+      let isShown = false;
+
       answerButton.addEventListener("click", () => {
+        isShown = !isShown;
+        if (isShown) {
+          answerButton.innerText = "Hide answer";
+        } else {
+          answerButton.innerText = "Show answer";
+        }
+
         answerContainer.classList.toggle("answer-container--hidden");
       });
 
@@ -55,20 +66,21 @@ export default function Create() {
 
       // Tag list
       // !!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      // questionCards.tags.forEach((tag) => {
-      //   const tagItem = document.createElement("li");
-      //   tagList.append(tagItem);
-      //   tagItem.innerText = tag;
-      //   tagItem.classList.add("tag");
-      // });
+      console.log(questionCard);
+      questionCard.tags.forEach((tag) => {
+        const tagItem = document.createElement("li");
+        tagList.append(tagItem);
+        tagItem.innerText = tag;
+        tagItem.classList.add("tag");
+      });
 
       main.append(card);
       card.append(
         headline,
         bookmark,
         questionText,
-        answerContainer,
         answerButtonContainer,
+        answerContainer,
         tagList
       );
       bookmark.append(bookmarkUnfilled, bookmarkFilled);
@@ -77,16 +89,16 @@ export default function Create() {
       tagList.append(tagsListButtons);
     });
   }
-  // function to get question out of api
+
+  // Get questions out of API
   function getQuestions(questionObject) {
-    questionObject.map((questionContainer) => {
-      const questionData = {
-        question: questionContainer.question,
-        answer: questionContainer.correct_answer,
-        tags: questionContainer.category,
+    // Mapen questionCards weil ein array erstellt wird den wir dann benutzen 
+    questionCards = questionObject.map((questionData) => {
+      return {
+        question: questionData.question,
+        answer: questionData.correct_answer,
+        tags: [questionData.category, questionData.difficulty],
       };
-      questionCards.push(questionData);
-      iterateThroughCards();
     });
   }
   // Fetch api
@@ -95,6 +107,9 @@ export default function Create() {
       const response = await fetch("https://opentdb.com/api.php?amount=10");
       const questionData = await response.json();
       getQuestions(questionData.results);
+      // Weil ascynchron, daher function zu card erstellen hier rein
+      iterateThroughCards();
+      console.log(questionData);
     } catch (error) {
       console.error(error.message);
     }
