@@ -1,4 +1,4 @@
-import HandleInput from "../form/form.js";
+// import HandleInput from "../form/form.js";
 export default function Create() {
   let questionCards = [];
 
@@ -26,15 +26,21 @@ export default function Create() {
       form.reset();
       form.elements.questionText.focus();
       questionCards.questionCard.push(submitedQuestionCardValues);
+      // Aufrufen um zu rendern
+      iterateThroughCards();
+      console.log(submitedQuestionCardValues);
     });
   }
   createNewCard();
+  console.log(questionCards);
 
   // // Create card
   const homePage = document.querySelector('[data-js="home-page"]');
   const bookmarkPage = document.querySelector('[data-js="bookmark-page"]');
 
   function iterateThroughCards() {
+    // homePage leeren
+    homePage.innerHTML = "";
     questionCards.forEach((questionCard) => {
       const card = document.createElement("article");
       card.classList.add("card");
