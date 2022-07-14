@@ -18,9 +18,9 @@
       <h1 class="headline">QUIZ-APP</h1>
     </header>
     <main class="content" data-js="content">
-       <!--------- Home Page --------->
-       <div class="home-page" data-js="home-page">
-      <!-- <article class="card" data-js="card">
+      <!--------- Home Page --------->
+      <div class="home-page" data-js="home-page">
+        <!-- <article class="card" data-js="card">
           <h2 class="card__headline" data-js="card__healine">Question:</h2>
           <button type="button" class="icon" data-js="bookmark-button">
             <img
@@ -60,79 +60,87 @@
           </ul>
         </div>
       </article> -->
-
-
-    
-    </div>
+      </div>
       <!--------- END Home Page --------->
 
-    <!--------- Bookmarks Page --------->
-    <div class="bookmark-page page--hidden" data-js="bookmark-page">
-  </div>
-    <!--------- END Bookmarks Page --------->
+      <!--------- Bookmarks Page --------->
+      <div class="bookmark-page page--hidden" data-js="bookmark-page"></div>
+      <!--------- END Bookmarks Page --------->
 
-    <!--------- Create Page --------->
-    <div class="create-page page--hidden" data-js="create-page">
-    <h2 class="content__headline">Create your question card</h2>
-      <form class="form question__form" data-js="form" action="" method="get">
-        <label class="question-headline" for="question-text">Add your question</label>
-        <textarea
-          name="questionText"
-          id="question-text"
-          rows="5"
-          cols="40"
-          placeholder="Enter your question"
-        ></textarea>
-        <label class="question-headline" for="answer-text">Add your answer</label>
-        <textarea
-          name="answerText"
-          id="answer-text"
-          rows="5"
-          cols="40"
-          placeholder="Enter your question"
-        ></textarea>
-        <label class="question-headline" for="tag-text">Add tags devided by comma</label>
-        <input
-          name="tagText"
-          id="tag-text"
-          placeholder="Enter your question"
-        ></input>
-        <div class="btn-container">
-        <input class="submit-btn btn btn--shadow" type="submit" value="Submit" />
-        </div>
-      </form>
-    </div>
+      <!--------- Create Page --------->
+      <div class="create-page page--hidden" data-js="create-page">
+        <h2 class="content__headline">Create your question card</h2>
+        <form class="form question__form" data-js="form" action="" method="get">
+          <label class="question-headline" for="question-text"
+            >Add your question</label
+          >
+          <textarea
+            name="questionText"
+            id="question-text"
+            rows="5"
+            cols="40"
+            placeholder="Enter your question"
+          ></textarea>
+          <label class="question-headline" for="answer-text"
+            >Add your answer</label
+          >
+          <textarea
+            name="answerText"
+            id="answer-text"
+            rows="5"
+            cols="40"
+            placeholder="Enter your question"
+          ></textarea>
+          <label class="question-headline" for="tag-text"
+            >Add tags devided by comma</label
+          >
+          <input
+            name="tagText"
+            id="tag-text"
+            placeholder="Enter your question"
+          / >
+          <div class="btn-container">
+            <input
+              class="submit-btn btn btn--shadow"
+              type="submit"
+              value="Submit"
+            />
+          </div>
+        </form>
+      </div>
       <!--------- END Create Page --------->
 
       <!--------- Profile Page --------->
       <div class="profile-page page--hidden" data-js="profile-page">
-      <section class="avatar-container">
-        <article class="avatar">
-          <img
-            class="avatar__img"
-            src="/images/peep-19.svg"
-            alt="profile pic"
-          />
-          <h2 class="avatar__name">Pika Chu</h2>
+        <section class="avatar-container">
+          <article class="avatar">
+            <img
+              class="avatar__img"
+              src="/images/peep-19.svg"
+              alt="profile pic"
+            />
+            <h2 class="avatar__name">Pika Chu</h2>
+          </article>
+        </section>
+        <article class="about-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+          distinctio consequuntur aperiam nam rem ad earum nesciunt cupiditate
+          quas nobis quisquam ipsa nihil dolore, dicta neque architecto facilis
+          ducimus nemo.
         </article>
-      </section>
-      <article class="about-text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-        distinctio consequuntur aperiam nam rem ad earum nesciunt cupiditate
-        quas nobis quisquam ipsa nihil dolore, dicta neque architecto facilis
-        ducimus nemo.
-      </article>
-      <article class="skill-tags">
-        <ul class="tag-list">
-          <li class="tag">history</li>
-          <li class="tag">comic</li>
-          <li class="tag">food</li>
-          <li class="tag">travel</li>
-          <li class="tag">trains</li>
-        </ul>
-      </article>
-      <button type="button" class="btn submit-btn btn--shadow">Log-out</button>
-    </div>
+        <article class="skill-tags">
+          <ul class="tag-list">
+            <li class="tag">history</li>
+            <li class="tag">comic</li>
+            <li class="tag">food</li>
+            <li class="tag">travel</li>
+            <li class="tag">trains</li>
+          </ul>
+        </article>
+        <button type="button" class="btn submit-btn btn--shadow">
+          Log-out
+        </button>
+      </div>
       <!--------- END Profile Page --------->
     </main>
 
@@ -140,58 +148,81 @@
     <nav>
       <ul class="nav__list">
         <li class="nav__icons" data-js="nav-list">
-          <button class="nav__links" type="button" data-js="nav-button" data-page="homeButton">
+          <button
+            class="nav__links"
+            type="button"
+            data-js="nav-button"
+            data-page="homeButton"
+          >
             <img src="/images/home.svg" alt="home icon" />
             <img
-            class="nav__icon icon icon--active"
-            src="/images/home-filled.svg"
-            alt="bookmark icon"
-            data-js="icon--filled"
-          />
-            <p class="nav__links__text">Home</p></button
-          >
+              class="nav__icon icon icon--active"
+              src="/images/home-filled.svg"
+              alt="bookmark icon"
+              data-js="icon--filled"
+            />
+            <p class="nav__links__text">Home</p>
+          </button>
         </li>
         <li class="nav__icons" data-js="nav-list">
-          <button class="nav__links" type="button" data-js="nav-button" data-page="bookmarksButton"> 
-            <img src="/images/bookmark.svg" alt="bookmark icon" data-js="nav-icon"/>
+          <button
+            class="nav__links"
+            type="button"
+            data-js="nav-button"
+            data-page="bookmarksButton"
+          >
             <img
-            class="nav__icon icon  icon--active"
-            src="/images/bookmark-filled.svg"
-            alt="bookmark icon"
-            data-js="icon--filled"
-          />
-            <p class="nav__links__text">Bookmarks</p></button
-          >
-          
+              src="/images/bookmark.svg"
+              alt="bookmark icon"
+              data-js="nav-icon"
+            />
+            <img
+              class="nav__icon icon icon--active"
+              src="/images/bookmark-filled.svg"
+              alt="bookmark icon"
+              data-js="icon--filled"
+            />
+            <p class="nav__links__text">Bookmarks</p>
+          </button>
         </li>
         <li class="nav__icons" data-js="nav-list">
-          <button class="nav__links" type="button" data-js="nav-button" data-page="createButton">
+          <button
+            class="nav__links"
+            type="button"
+            data-js="nav-button"
+            data-page="createButton"
+          >
             <img src="/images/edit.svg" alt="create/edit icon" />
             <img
-            class="nav__icon icon  icon--active"
-            src="/images/edit-filled.svg"
-            alt="bookmark icon"
-            data-js="icon--filled"
-          />
-            <p class="nav__links__text">Create</p></button
-          >
+              class="nav__icon icon icon--active"
+              src="/images/edit-filled.svg"
+              alt="bookmark icon"
+              data-js="icon--filled"
+            />
+            <p class="nav__links__text">Create</p>
+          </button>
         </li>
         <li class="nav__icons" data-js="nav-list">
-          <button class="nav__links" type="button" data-js="nav-button" data-page="profileButton">
+          <button
+            class="nav__links"
+            type="button"
+            data-js="nav-button"
+            data-page="profileButton"
+          >
             <img src="/images/account_circle.svg" alt="account icon" />
             <img
-            class="nav__icon icon  icon--active"
-            src="/images/account_circle-filled.svg"
-            alt="bookmark icon"
-            data-js="icon--filled"
-          />
-            <p class="nav__links__text">Profile</p></button
-          >
+              class="nav__icon icon icon--active"
+              src="/images/account_circle-filled.svg"
+              alt="bookmark icon"
+              data-js="icon--filled"
+            />
+            <p class="nav__links__text">Profile</p>
+          </button>
         </li>
       </ul>
     </nav>
-     <!--------- END Nav --------->
-  
+    <!--------- END Nav --------->
+
     <script src="/script/index.js" defer type="module"></script>
   </body>
 </html>
