@@ -8,12 +8,14 @@ export default function HandleInput() {
 
     const questionInputValue = form.elements.questionText.value;
     const answerInputValue = form.elements.answerText.value;
-    const tagsInputValue = form.elements.tagText.value;
+    const tagsInputValue = form.elements.tagText.value.split(",");
+
+    const convertedTags = tagsInputValue.map((tag) => tag.trim());
 
     const submitedQuestionCardValues = {
       question: questionInputValue,
       answer: answerInputValue,
-      tags: [tagsInputValue],
+      tags: convertedTags,
     };
 
     form.reset();
