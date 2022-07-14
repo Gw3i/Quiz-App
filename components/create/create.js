@@ -25,7 +25,7 @@ export default function Create() {
 
       form.reset();
       form.elements.questionText.focus();
-      questionCards.push(submitedQuestionCardValues);
+      questionCards.questionCard.push(submitedQuestionCardValues);
     });
   }
   createNewCard();
