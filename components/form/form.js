@@ -23,5 +23,5 @@ export default function HandleInput() {
     newQuestionCard.push(submitedQuestionCardValues);
   });
 
-  console.log(newQuestionCard);
+  return newQuestionCard;
 }

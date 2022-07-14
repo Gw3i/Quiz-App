@@ -1,5 +1,34 @@
+import HandleInput from "../form/form.js";
 export default function Create() {
   let questionCards = [];
+
+  // Create new Card out of form input
+  function createNewCard() {
+    const form = document.querySelector('[data-js="form"]');
+
+    // let newQuestionCard = [];
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const questionInputValue = form.elements.questionText.value;
+      const answerInputValue = form.elements.answerText.value;
+      const tagsInputValue = form.elements.tagText.value.split(",");
+
+      const convertedTags = tagsInputValue.map((tag) => tag.trim());
+
+      const submitedQuestionCardValues = {
+        question: questionInputValue,
+        answer: answerInputValue,
+        tags: convertedTags,
+      };
+
+      form.reset();
+      form.elements.questionText.focus();
+      questionCards.push(submitedQuestionCardValues);
+    });
+  }
+  createNewCard();
 
   // // Create card
   const homePage = document.querySelector('[data-js="home-page"]');
@@ -91,7 +120,6 @@ export default function Create() {
       const tagList = document.createElement("ul");
       tagList.classList.add("tag-list");
       const tagsListButtons = document.createElement("button");
-
       // Tag list
       // !!!!!!!!!!!!!!!!!!!!!!!!!!!!
       questionCard.tags.forEach((tag) => {
@@ -142,6 +170,5 @@ export default function Create() {
       console.error(error.message);
     }
   }
-
   fetchQuestions();
 }
