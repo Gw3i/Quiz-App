@@ -1,5 +1,4 @@
-@import "/components/question-card/question-container.css";
-
+@import '/components/question-card/question-container.css';
 
 .content {
   display: flex;

@@ -8,14 +8,14 @@ export default function Create() {
 
     // let newQuestionCard = [];
 
-    form.addEventListener("submit", (event) => {
+    form.addEventListener('submit', event => {
       event.preventDefault();
 
       const questionInputValue = form.elements.questionText.value;
       const answerInputValue = form.elements.answerText.value;
-      const tagsInputValue = form.elements.tagText.value.split(",");
+      const tagsInputValue = form.elements.tagText.value.split(',');
 
-      const convertedTags = tagsInputValue.map((tag) => tag.trim());
+      const convertedTags = tagsInputValue.map(tag => tag.trim());
 
       const submitedQuestionCardValues = {
         question: questionInputValue,
@@ -25,7 +25,7 @@ export default function Create() {
 
       form.reset();
       form.elements.questionText.focus();
-      questionCards.questionCard.push(submitedQuestionCardValues);
+      questionCards.push(submitedQuestionCardValues);
       // Aufrufen um zu rendern
       iterateThroughCards();
       console.log(submitedQuestionCardValues);
@@ -40,36 +40,36 @@ export default function Create() {
 
   function iterateThroughCards() {
     // homePage leeren
-    homePage.innerHTML = "";
-    questionCards.forEach((questionCard) => {
-      const card = document.createElement("article");
-      card.classList.add("card");
+    homePage.innerHTML = '';
+    questionCards.forEach(questionCard => {
+      const card = document.createElement('article');
+      card.classList.add('card');
 
-      const headline = document.createElement("h2");
-      headline.classList.add("card__headline");
-      headline.innerText = "Question";
+      const headline = document.createElement('h2');
+      headline.classList.add('card__headline');
+      headline.innerText = 'Question';
 
       // -----------------   Bookmark button ------------------------ //
       // Need to export!!!
-      const bookmark = document.createElement("button");
+      const bookmark = document.createElement('button');
 
-      bookmark.addEventListener("click", () => {
-        bookmarkFilled.classList.toggle("icon--active");
+      bookmark.addEventListener('click', () => {
+        bookmarkFilled.classList.toggle('icon--active');
         // if icon--active is not in class that set isBookmarked to true
-        if (bookmarkFilled.className !== "icon--active") {
+        if (bookmarkFilled.className !== 'icon--active') {
           questionCard.isBookmarked = true;
           console.log(questionCard.isBookmarked);
         }
-        const bookmarkedCards = questionCards.filter((questionCard) => {
+        const bookmarkedCards = questionCards.filter(questionCard => {
           return questionCard.isBookmarked === true;
         });
         console.log(bookmarkedCards);
 
-        bookmarkedCards.forEach((bookmarkedCard) => {
-          const bookmarkCardContainer = document.createElement("article");
-          bookmarkCardContainer.classList.add("card");
+        bookmarkedCards.forEach(bookmarkedCard => {
+          const bookmarkCardContainer = document.createElement('article');
+          bookmarkCardContainer.classList.add('card');
 
-          const bookmarkedQestionText = document.createElement("p");
+          const bookmarkedQestionText = document.createElement('p');
           bookmarkedQestionText.innerText = bookmarkedCard.question;
 
           bookmarkPage.append(bookmarkCardContainer);
@@ -80,59 +80,59 @@ export default function Create() {
       //
       //
       //
-      const bookmarkFilled = document.createElement("img");
-      bookmarkFilled.src = "/images/bookmark-filled.svg";
-      bookmarkFilled.classList.add("bookmark-icon", "icon", "icon--active");
+      const bookmarkFilled = document.createElement('img');
+      bookmarkFilled.src = '/images/bookmark-filled.svg';
+      bookmarkFilled.classList.add('bookmark-icon', 'icon', 'icon--active');
 
-      const bookmarkUnfilled = document.createElement("img");
-      bookmarkUnfilled.src = "/images/bookmark.svg";
-      bookmarkUnfilled.classList.add("bookmark-icon", "icon");
+      const bookmarkUnfilled = document.createElement('img');
+      bookmarkUnfilled.src = '/images/bookmark.svg';
+      bookmarkUnfilled.classList.add('bookmark-icon', 'icon');
 
       // If bookmark is filled, change isBookmarked to true
 
       // Question text
       const questionText = questionCard.question;
       // Answer button
-      const answerButtonContainer = document.createElement("div");
-      answerButtonContainer.classList.add("card__btn__section");
-      const answerButton = document.createElement("button");
-      answerButton.classList.add("btn", "btn--shadow");
-      answerButton.innerText = "Show answer";
+      const answerButtonContainer = document.createElement('div');
+      answerButtonContainer.classList.add('card__btn__section');
+      const answerButton = document.createElement('button');
+      answerButton.classList.add('btn', 'btn--shadow');
+      answerButton.innerText = 'Show answer';
 
       // Show / Hide function
       let isShown = false;
 
-      answerButton.addEventListener("click", () => {
+      answerButton.addEventListener('click', () => {
         isShown = !isShown;
         if (isShown) {
-          answerButton.innerText = "Hide answer";
+          answerButton.innerText = 'Hide answer';
         } else {
-          answerButton.innerText = "Show answer";
+          answerButton.innerText = 'Show answer';
         }
 
-        answerContainer.classList.toggle("answer-container--hidden");
+        answerContainer.classList.toggle('answer-container--hidden');
       });
 
       // Answer container
-      const answerContainer = document.createElement("div");
+      const answerContainer = document.createElement('div');
       answerContainer.classList.add(
-        "answer-container",
-        "answer-container--hidden"
+        'answer-container',
+        'answer-container--hidden'
       );
-      const answerIcon = document.createElement("img");
-      answerIcon.src = "/images/info.svg";
+      const answerIcon = document.createElement('img');
+      answerIcon.src = '/images/info.svg';
       const answerText = questionCard.answer;
 
-      const tagList = document.createElement("ul");
-      tagList.classList.add("tag-list");
-      const tagsListButtons = document.createElement("button");
+      const tagList = document.createElement('ul');
+      tagList.classList.add('tag-list');
+      const tagsListButtons = document.createElement('button');
       // Tag list
       // !!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      questionCard.tags.forEach((tag) => {
-        const tagItem = document.createElement("li");
+      questionCard.tags.forEach(tag => {
+        const tagItem = document.createElement('li');
         tagList.append(tagItem);
         tagItem.innerText = tag;
-        tagItem.classList.add("tag");
+        tagItem.classList.add('tag');
       });
 
       //  Append to home page
@@ -155,7 +155,7 @@ export default function Create() {
   // Get questions out of API
   function getQuestions(questionObject) {
     // Mapen questionCards weil ein array erstellt wird den wir dann benutzen
-    questionCards = questionObject.map((questionData) => {
+    questionCards = questionObject.map(questionData => {
       return {
         question: questionData.question,
         answer: questionData.correct_answer,
@@ -167,7 +167,7 @@ export default function Create() {
   // Fetch api
   async function fetchQuestions() {
     try {
-      const response = await fetch("https://opentdb.com/api.php?amount=10");
+      const response = await fetch('https://opentdb.com/api.php?amount=10');
       const questionData = await response.json();
       getQuestions(questionData.results);
       // Weil ascynchron, daher function zu card erstellen hier rein
